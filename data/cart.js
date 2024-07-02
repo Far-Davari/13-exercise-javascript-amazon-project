@@ -14,6 +14,8 @@ function saveToStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+const addedMessageTimeout = {};
+
 // Add cartItems to the cart array in cart.js
 export function addToCart(productId) {
   let matchingItem;
@@ -39,6 +41,23 @@ export function addToCart(productId) {
     });
   }
 
+  // Show added message when click on add to cart button
+  const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+
+  addedMessage.classList.add("added-to-cart-visible");
+
+  // Add timeout to remove added message after 2 seconds.
+  const previousTimeoutId = addedMessageTimeout[productId];
+  if (previousTimeoutId) {
+    clearTimeout(previousTimeoutId);
+  }
+
+  const timeoutId = setTimeout(() => {
+    addedMessage.classList.remove("added-to-cart-visible");
+  }, 2000)
+
+  addedMessageTimeout[productId] = timeoutId;
+    
   saveToStorage();
 }
 
