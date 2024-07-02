@@ -656,5 +656,37 @@
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "bc2847e9-5453-450f-b7cf-57fde044a955",
+    image: "images/products/backpack.jpg",
+    name: "Laptop Backpack",
+    rating: {
+      stars: 1,
+      count: 3157
+    },
+    priceCents: 17099,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ]
+  },
+  {
+    id: "bc284er9-5323-465f-b7cf-57fde044a955",
+    image: "images/products/umbrella.jpg",
+    name: "Small Umbrella",
+    rating: {
+      stars: 5,
+      count: 3157
+    },
+    priceCents: 7999,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ]
   }
 ];

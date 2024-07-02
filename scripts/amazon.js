@@ -76,7 +76,7 @@ function updateCartQuantity() {
 document.querySelectorAll(".js-add-to-cart")
   .forEach(button => {
     button.addEventListener("click", () => {
-      const productId = button.dataset.productId;
+      const { productId } = button.dataset;
 
       // revoke addToCart function to add cartItems to the cart array.
       addToCart(productId);
